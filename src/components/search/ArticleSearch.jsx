@@ -1,17 +1,18 @@
-
+import React from "react";
+import * as S from "./style";
 
 export const ArticleSearch = () => {
 
     return (
-        <div class="main__container">
-        <div class="main__menu menu">
-            <a class="menu__logo-link" href="" target="_blank">
-                <img class="menu__logo-img" src="img/logo.png" alt="logo"></img>
-            </a>
-            <form class="menu__form" action="#">                            
-                <button class="menu__btn-serch btn-hov02" id="btnGoBack">Вернуться на главную</button>
-            </form>                    
-        </div>                    
-    </div>
+        <S.MainContainer>
+        <S.MainMenu>
+            <S.MenuLogoLink href="" target="_blank">
+                <S.MainLogoImg src="img/logo.png" alt="logo"></S.MainLogoImg>
+            </S.MenuLogoLink>
+            <S.MenuForm action="#">                            
+                <S.ButtonMenu id="btnGoBack">Вернуться на главную</S.ButtonMenu>
+            </S.MenuForm>                    
+        </S.MainMenu>                    
+    </S.MainContainer>
     );
 };

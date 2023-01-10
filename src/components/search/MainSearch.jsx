@@ -1,20 +1,21 @@
-
+import React from "react";
+import * as S from "./style";
 
 export const MainSearch = () => {
 
     return (
-                <div class="main__search search">
-                    <a class="search__logo-link" href="#" target="_blank">
-                        <img class="search__logo-img" src="img/logo.png" alt="logo"></img>
-                    </a>
-                    <a class="search__logo-mob-link" href="#" target="_blank">
-                        <img class="search__logo-mob-img" src="img/logo-mob.png" alt="logo"></img>
-                    </a>
-                    <form class="search__form" action="#">
-                        <input class="search__text" type="search" placeholder="Поиск по объявлениям" name="search"></input>
-                        <input class="search__text-mob" type="search" placeholder="Поиск" name="search-mob"></input>
-                        <button class="search__btn btn-hov02">Найти</button>
-                    </form>
-                </div>
+                <S.MainSearch>
+                    <S.SearchLogoLink href="#" target="_blank">
+                        <S.SearchLogoImg src="img/logo.png" alt="logo"></S.SearchLogoImg>
+                    </S.SearchLogoLink>
+                    <S.SearchLogoLinkMob href="#" target="_blank">
+                        <S.SearchLogoMobLink src="img/logo-mob.png" alt="logo"></S.SearchLogoMobLink>
+                    </S.SearchLogoLinkMob>
+                    <S.SearchForm action="#">
+                        <S.SearchText type="search" placeholder="Поиск по объявлениям" name="search"></S.SearchText>
+                        <S.SearchTextMob type="search" placeholder="Поиск" name="search-mob"></S.SearchTextMob>
+                        <S.Button>Найти</S.Button>
+                    </S.SearchForm>
+                </S.MainSearch>
     );
 };

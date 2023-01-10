@@ -1,28 +1,28 @@
-
+import React from "react";
+import * as S from "./style";
 
 export const Footer = () => {
 
 
     return (
-        <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__img">
+        <S.Footer>
+        <S.FooterContainer>
+            <S.FooterImg>
                 <a href="" target="_self">
                     <img src="img/icon_01.png" alt="home"></img>  
                 </a>
-            </div>
-            <div class="footer__img">
+            </S.FooterImg>
+            <S.FooterImg>
                 <a href="" target="_self">
                     <img src="img/icon_02.png" alt="home"></img>
                 </a>
-            </div>
-            <div class="footer__img">
+                </S.FooterImg>
+            <S.FooterImg>
                 <a href="" target="_self">
                     <img src="img/icon_03.png" alt="home"></img>
                 </a>
-            </div>
-        </div>
-        
-    </footer>
+                </S.FooterImg>
+        </S.FooterContainer>
+    </S.Footer>
     )
 }

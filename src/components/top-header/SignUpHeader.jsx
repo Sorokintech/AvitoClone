@@ -1,12 +1,13 @@
-
+import React from "react";
+import * as S from "./style";
 
 export const SignUpHeader = () => {
 
     return(
-        <header class="header">
-                <nav class="header__nav">                    
-                        <button class="header__btn-main-enter btn-hov01" id="btnMainEnter">Вход в личный кабинет</button>
-                </nav>
-            </header>
+        <S.Header class="header">
+                <S.HeaderNav class="header__nav">                    
+                        <S.Button class="header__btn-main-enter btn-hov01" id="btnMainEnter">Вход в личный кабинет</S.Button>
+                </S.HeaderNav>
+            </S.Header>
     );
 };
