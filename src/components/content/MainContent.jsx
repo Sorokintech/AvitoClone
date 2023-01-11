@@ -4,7 +4,7 @@ import * as S from "./style";
 export const MainContent = () => {
 
     return (
-        <div>
+        <S.Container>
         <S.Header>Объявления</S.Header>
             <S.MainContent>
                 <S.Cards>                            
@@ -19,7 +19,7 @@ export const MainContent = () => {
                                 <a href="" target="_blank">
                                     <S.CardTitle>Ракетка для большого тенниса Triumph Pro ST</S.CardTitle>
                                 </a>
-                                <S.CardPrice class="card__price">2&nbsp;200&nbsp;₽</S.CardPrice>
+                                <S.CardPrice>2&nbsp;200&nbsp;₽</S.CardPrice>
                                 <S.CardPlace>Санкт Петербург</S.CardPlace>
                                 <S.CardDate>Сегодня в&nbsp;10:45</S.CardDate>
                             </div>
@@ -27,7 +27,7 @@ export const MainContent = () => {
                     </S.CardsItem>
                 </S.Cards>                        
                     </S.MainContent>
-        </div>
+        </S.Container>
                     
     );
 };

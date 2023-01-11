@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    max-width: 1178px;
+    margin: 0 auto;
+    padding: 52px 10px 37px;
+`
 export const Header = styled.h2`
     font-style: normal;
     font-weight: 500;
@@ -13,7 +18,7 @@ export const Header = styled.h2`
     }
     ::before {
     content: "";
-    display: block;
+    display: none;
     width: 12px;
     height: 12px;
     background-color: transparent;
@@ -32,11 +37,11 @@ export const MainContent = styled.div`
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    position: fixed;
-    right: 0;
+    /* position: fixed; */
+    /* right: 0;
     left: 0;
     top: 134px;
-    bottom: 84px;
+    bottom: 84px; */
 `;
 
 export const Cards = styled.div`
