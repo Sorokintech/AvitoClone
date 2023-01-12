@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+//Main Page style
+
 export const Container = styled.div`
     max-width: 1178px;
     margin: 0 auto;
@@ -74,7 +77,14 @@ export const CardImage = styled.div`
   width: 270px;
   height: 270px;
   background-color: #F0F0F0;
-`;
+  img: {
+    width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  }
+`
 
 export const CardsItem = styled.div`
     margin: 0;
@@ -118,3 +128,4 @@ export const Card = styled.div`
       -ms-flex-direction: column;
           flex-direction: column;
 `;
+
