@@ -1,6 +1,6 @@
 import { MainContent } from "../components/content/Main/MainContent";
-import { SignUpHeader } from "../components/top-header/SignUpHeader";
-import { MainSearch } from "../components/search/MainSearch";
+import { SignUpHeader } from "../components/top-header/SignUp/SignUpHeader";
+import { MainSearch } from "../components/search/Main/MainSearch";
 import { Footer } from "../components/footer/index";
 import * as S from "./style";
 

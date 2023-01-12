@@ -1,4 +1,4 @@
-import * as S from "./Main/style";
+import * as S from "./style";
 
 export const MyArticleContent = () => {
   return (
