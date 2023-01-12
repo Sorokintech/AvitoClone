@@ -123,18 +123,7 @@ export const FormBlock = styled.div`
           flex-direction: column;
   margin-bottom: 20px;
 `;
-export const FormBlockPrice = styled.div`
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 20px;
-  position: relative;
-`;
+
 export const FormInput = styled.input`
   padding: 13px 19px;
   background: #FFFFFF;
@@ -175,55 +164,41 @@ export const FormArea = styled.textarea`
   color: #0000004D;
 }
 
-`
-export const FormPrice = styled.input`
-  padding: 13px 19px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  font-size: 16px;
-  line-height: 1;
-  width: 200px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
 `;
-export const FormPriceCover = styled.div`
-  width: 24px;
-  height: 24px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  position: absolute;
-  bottom: 13px;
-  left: 170px;
-  z-index: 0;
-  background-color: #FFFFFF;
-  ::after {
-  content: "\A0 \20BD";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  z-index: 2;
-  }
-`;
-
-export const FormText = styled.p`
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  margin-bottom: 10px;
-  span: {
-  margin-left: 10px;
-  color: rgba(0, 0, 0, 0.3);
+export const PublishButton = styled.button`
+margin-top: 10px;
+width: 181px;
+height: 50px;
+background: #D9D9D9;
+border: 1px solid #D9D9D9;
+border-radius: 6px;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+:hover {
+background-color: #0080C1;
 }
 `;
 
-export const FormImageBlock = styled.div`
-  width: 500px;
+export const ModalReviews = styled.div`
+  width: 100%;
+  height: 495px;
+`;
+
+export const Review = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0;
+`;
+
+export const ReviewItem = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,73 +206,46 @@ export const FormImageBlock = styled.div`
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 10px;
-  overflow: hidden;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 `;
-export const FormImage = styled.div`
-  width: 90px;
-  height: 90px;
-  margin-right: 10px;
-  position: relative;
-  z-index: 0;
+export const ReviewLeftBlock = styled.div`
+  margin-right: 12px;
+`;
+export const ReviewImage = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F0F0F0;
   img: {
-  display: block;
+    display: block;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 2;
-}
-`
-export const FormImageCover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #F0F0F0;
-  z-index: -1;
-  ::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #D9D9D9;
-  top: 50%;
-  right: calc(50% - (30px/2));
-}
-::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #D9D9D9;
-  top: 50%;
-  right: calc(50% - (30px/2));
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
+  }
+`;
+export const ReviewRightBlock = styled.div`
+  display: block;
 `;
 
-export const PublishButton = styled.button`
-  margin-top: 10px;
-  width: 181px;
-  height: 50px;
-  background: #D9D9D9;
-  border: 1px solid #D9D9D9;
-  border-radius: 6px;
+export const ReviewName = styled.p`
+  margin-bottom: 12px;
+  font-weight: 600;
+  span: {
+    margin-left: 10px;
+    color: #5F5F5F;
+  }
+`;
+export const ReviewTitle = styled.h5`
+  font-weight: 600;
+`;
+export const ReviewText = styled.p`
   font-size: 16px;
-  line-height: 24px;
-  color: #FFFFFF;
-  :hover {
-  background-color: #0080C1;
-}
-`
+  line-height: 32px;
+  color: #000000;
+`;
