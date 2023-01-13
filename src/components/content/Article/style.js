@@ -91,7 +91,7 @@ export const BarImageDiv = styled.div`
   background-color: #F0F0F0;
   border: 2px solid #F0F0F0;
   margin: 0 5px;
-  img: {
+  img {
     width: 100%;
   height: auto;
   display: block;
@@ -118,6 +118,10 @@ export const RightBlockContent = styled.div`
 `
 export const ArticleTitle = styled.h3`
   margin-bottom: 10px;
+  font-size: 32px;
+    line-height: 46px;
+    font-weight: 700;
+    color: #000000;
 `
 export const ArticleInfo = styled.div`
   margin-bottom: 34px;
@@ -141,6 +145,7 @@ export const ArticleLink = styled.p`
   font-size: 16px;
   line-height: 21px;
   color: #009EE4;
+  cursor: pointer;
 `
 
 export const ArticlePrice = styled.p`
@@ -160,7 +165,7 @@ export const ArticleButton = styled.button`
   line-height: 22px;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
-  span: {
+  span {
     display: block;
     font-size: 14px;
     font-weight: 400;
@@ -189,7 +194,7 @@ export const AuthorImage = styled.div`
   height: 40px;
   background-color: #F0F0F0;
   border-radius: 50%;
-  img: {
+  img {
   width: 100%;
   height: auto;
   display: block;
@@ -219,7 +224,12 @@ export const DescriptionContainer = styled.div`
 `
 export const DescriptionContainerTitle = styled.h3`
   margin-bottom: 32px;
-  padding: 0 5px;`
+  padding: 0 5px;
+  font-size: 32px;
+    line-height: 46px;
+    font-weight: 700;
+    color: #000000;
+  `
 export const DescriptionContent = styled.div`
   max-width: 792px;
   width: 100%;

@@ -13,8 +13,8 @@ export const Seller = () => {
         <S.SmallContainer>
           <ArticleSearch />
           <SellerProfile />
+          <Items />
         </S.SmallContainer>
-        <Items/>
         <Footer />
       </S.Container>
     </S.Wrapper>

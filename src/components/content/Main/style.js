@@ -75,7 +75,7 @@ export const CardImage = styled.div`
   width: 270px;
   height: 270px;
   background-color: #F0F0F0;
-  img: {
+  img {
     width: 100%;
   height: 100%;
   display: block;

@@ -13,8 +13,9 @@ export const Profile = () => {
         <S.SmallContainer>
           <ArticleSearch />
           <ProfileInfo />
+          <Items/>
         </S.SmallContainer>
-        <Items/>
+       
         <Footer />
       </S.Container>
     </S.Wrapper>

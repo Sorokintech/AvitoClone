@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const Header = styled.h2`
   font-style: normal;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 40px;
   line-height: 42px;
   color: #000000;
   margin-bottom: 30px;
+  
 `;
 export const Profile = styled.div`
   width: 100%;
@@ -18,6 +19,10 @@ export const ProfileContent = styled.div`
 `;
 export const SettingsTitle = styled.h3`
   margin-bottom: 20px;
+  font-size: 32px;
+    line-height: 70px;
+    font-weight: 600;
+    color: #000000;
 `;
 export const Settings = styled.div`
   display: -webkit-box;
@@ -48,7 +53,7 @@ export const SettingsLeftBlockImage = styled.div`
   height: 170px;
   border-radius: 50%;
   background-color: #F0F0F0;
-  img: {
+  img {
     width: 100%;
   height: auto;
   display: block;
@@ -79,12 +84,28 @@ export const SettingsForm = styled.form`
 export const SettingsFormDiv = styled.div`
   display: inline-block;
   margin: 0 7px 20px;
+  label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #C4C4C4;
+    margin-bottom: 4px;
+    display: block;
+  }
 `;
 export const SettingsFormInput = styled.input`
   width: 300px;
+  background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 13px 19px;
 `;
 export const SettingsFormPhoneInput = styled.input`
   width: 614px;
+  background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 13px 19px;
 `;
 export const SettingsSaveButton = styled.button`
   font-size: 16px;

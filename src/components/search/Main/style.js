@@ -87,6 +87,7 @@ export const SearchTextMob = styled.input`
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+    display: none;
 `;
 export const Button = styled.button`
   margin-left: 10px;

@@ -36,7 +36,6 @@ export const ProfileInfo = () => {
                 <S.SettingsFormDiv>
                   <label for="lname">Фамилия</label>
                   <S.SettingsFormInput
-                    class="settings__l-name"
                     id="settings-lname"
                     name="lname"
                     type="text"
@@ -48,7 +47,6 @@ export const ProfileInfo = () => {
                 <S.SettingsFormDiv>
                   <label for="city">Город</label>
                   <S.SettingsFormInput
-                    class="settings__city"
                     id="settings-city"
                     name="city"
                     type="text"
@@ -60,16 +58,15 @@ export const ProfileInfo = () => {
                 <S.SettingsFormDiv>
                   <label for="phone">Телефон</label>
                   <S.SettingsFormPhoneInput
-                    class="settings__phone"
                     id="settings-phone"
                     name="phone"
                     type="tel"
-                    value="89161234567"
+                    value="89161234567"x
                     placeholder="+79161234567"
                   ></S.SettingsFormPhoneInput>
                 </S.SettingsFormDiv>
 
-                <S.SettingsSaveButton class="settings__btn btn-hov02" id="settings-btn">
+                <S.SettingsSaveButton id="settings-btn">
                   Сохранить
                 </S.SettingsSaveButton>
               </S.SettingsForm>

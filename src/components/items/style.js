@@ -14,7 +14,7 @@ export const Header = styled.h3`
   margin-bottom: 20px;
   font-size: 32px;
   line-height: 40px;
-  font-weight: 500;
+  font-weight: 700;
   color: #000000;
 `
 
@@ -48,7 +48,7 @@ export const CardImage = styled.div`
   width: 270px;
   height: 270px;
   background-color: #F0F0F0;
-  img: {
+  img {
     width: 100%;
   height: 100%;
   display: block;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.h2`
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 40px;
   line-height: 42px;
   color: #000000;
@@ -49,7 +49,7 @@ export const SellerImage = styled.div`
   height: 170px;
   border-radius: 50%;
   background-color: #F0F0F0;
-  img: {
+  img {
     width: 100%;
   height: auto;
   display: block;
@@ -97,7 +97,7 @@ export const SellerShowButton = styled.button`
   line-height: 22px;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
-  span: {
+  span {
     display: block;
   font-size: 14px;
   font-weight: 400;

@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./style";
+import { Main } from "../../../pages/main";
 
 export const ArticleSearch = () => {
   return (

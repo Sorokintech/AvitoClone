@@ -54,7 +54,7 @@ export const ArticleContent = () => {
               </S.ArticleInfo>
               <S.ArticlePrice>2 200 ₽</S.ArticlePrice>
               <S.ArticleButton>
-                Показать&nbsp;телефон
+                Показать&nbsp;телефон 
                 <span>8&nbsp;905&nbsp;ХХХ&nbsp;ХХ&nbsp;ХХ</span>
               </S.ArticleButton>
               <S.ArticleAuthor>

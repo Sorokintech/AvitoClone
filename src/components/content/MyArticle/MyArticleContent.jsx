@@ -52,10 +52,10 @@ export const MyArticleContent = () => {
                 </S.ArticleLink>
               </S.ArticleInfo>
               <S.ArticlePrice>2 200 ₽</S.ArticlePrice>
-              <div class="article__btn-block">
+              <S.ButtonBlock>
                 <S.EditButton>Редактировать</S.EditButton>
                 <S.RemoveButton>Снять с публикации</S.RemoveButton>
-              </div>
+              </S.ButtonBlock>
 
               <S.ArticleAuthor>
                 <S.AuthorImage>
