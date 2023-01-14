@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ReviewsModal } from "../../../modals/reviews";
 import * as S from "./style";
 
 export const ArticleContent = () => {
   const [modal, setModal] = useState(false);
-
+  const ref = useRef();
+  function useOnClickOutside(ref, handler) {
+    useEffect(
+      () => {
+        const listener = (event) => {
+          if (!ref.current || ref.current.contains(event.target)) {
+            return;
+          }
+          handler(event);
+          document.body.style.removeProperty('overflow');
+        };
+        document.addEventListener("mousedown", listener);
+        document.addEventListener("touchstart", listener);
+        return () => {
+          document.removeEventListener("mousedown", listener);
+          document.removeEventListener("touchstart", listener);
+        };
+      },
+      [ref, handler]
+    );
+  }
+  useOnClickOutside(ref, () => setModal(false));
   const toggleModal = () => {
     setModal(!modal);
+    document.body.style.overflow = 'hidden';
   };
 
   return (
@@ -60,7 +82,7 @@ export const ArticleContent = () => {
                 </S.ArticleLink>
                 {modal && (
                   <>
-                  <ReviewsModal/>
+                  <ReviewsModal ref={ref}/>
                   </>
                 )}
               </S.ArticleInfo>

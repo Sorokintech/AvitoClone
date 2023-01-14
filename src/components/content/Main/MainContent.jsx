@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import * as S from "./style";
 
 export const MainContent = () => {
@@ -12,16 +13,14 @@ export const MainContent = () => {
             <S.CardsItem key={key}>
                               <S.Card>
                                 <S.CardImage>
-                                  <a href="" target="_blank">
+                                <NavLink to={'/article'}>
                                     <img src="" alt=""></img>
-                                  </a>
+                                    </NavLink>
                                 </S.CardImage>
                                 <div>
-                                  <a href="" target="_blank">
                                     <S.CardTitle>
-                                      Ракетка для большого тенниса Triumph Pro ST
+                                    Ракетка для большого тенниса Triumph Pro ST
                                     </S.CardTitle>
-                                  </a>
                                   <S.CardPrice>2&nbsp;200&nbsp;₽</S.CardPrice>
                                   <S.CardPlace>Санкт Петербург</S.CardPlace>
                                   <S.CardDate>Сегодня в&nbsp;10:45</S.CardDate>

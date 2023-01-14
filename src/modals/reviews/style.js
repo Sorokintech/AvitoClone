@@ -8,9 +8,8 @@ export const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
-  /* width: 100%;
-  min-height: 100%;
-  overflow: hidden; */
+  overflow: auto;
+  scroll-behavior: auto;
 `;
 
 export const Container = styled.div`
@@ -22,17 +21,13 @@ export const Container = styled.div`
   bottom: 0;
   position: fixed;
   background: rgba(49, 49, 49, 0.8);
-  /* max-width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  background-color: #F4F5F6; */
+  overflow: auto;
 `;
 
 export const ModalBlock = styled.div`
   position: absolute;
   z-index: 5;
-  left: calc(50% - (700px/2));
+  left: calc(50% - (700px / 2));
   top: 60px;
   opacity: 1;
 `;
@@ -43,19 +38,18 @@ export const ModalContent = styled.div`
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 700px;
   height: auto;
   padding: 32px 50px 42px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 12px;
   position: relative;
 `;
-
 
 export const ModalTitle = styled.h3`
   font-size: 32px;
@@ -63,9 +57,9 @@ export const ModalTitle = styled.h3`
   font-weight: 500;
   color: #000000;
   :hover::before {
-  border-top: 2px solid #0080C1;
-  border-left: 2px solid #0080C1;
-}
+    border-top: 2px solid #0080c1;
+    border-left: 2px solid #0080c1;
+  }
 `;
 export const ModalCloseButton = styled.div`
   width: 23px;
@@ -81,39 +75,39 @@ export const ModalCloseButtonLine = styled.div`
   width: 100%;
   height: 100%;
   :hover::after {
-  background-color: #0080C1;
-};
+    background-color: #0080c1;
+  }
   :hover::before {
-  background-color: #0080C1;
-};
- ::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #D9D9D9;
-  top: 47%;
-  right: -4px;
-}
+    background-color: #0080c1;
+  }
+  ::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #d9d9d9;
+    top: 47%;
+    right: -4px;
+  }
   ::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #D9D9D9;
-  top: 47%;
-  right: -4px;
-}
-::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #d9d9d9;
+    top: 47%;
+    right: -4px;
+  }
+  ::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  ::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
 `;
 export const FormAdd = styled.div`
   margin-top: 22px;
@@ -122,8 +116,8 @@ export const FormAdd = styled.div`
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 `;
 
@@ -134,14 +128,15 @@ export const FormBlock = styled.div`
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 20px;
+  outline: none;
 `;
 
 export const FormInput = styled.input`
   padding: 13px 19px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   font-size: 16px;
@@ -150,54 +145,55 @@ export const FormInput = styled.input`
   font-size: 16px;
   line-height: 24px;
   ::-webkit-input-placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0000004D;
-}
-
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0000004d;
+    outline: none;
+  }
 `;
 export const FormArea = styled.textarea`
   padding: 13px 19px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   font-size: 16px;
   line-height: 1;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   max-height: 200px;
   font-size: 16px;
   line-height: 24px;
   ::-webkit-input-placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0000004D;
-}
-
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0000004d;
+    outline: none;
+  }
 `;
 export const PublishButton = styled.button`
-margin-top: 10px;
-width: 181px;
-height: 50px;
-background: #D9D9D9;
-border: 1px solid #D9D9D9;
-border-radius: 6px;
-font-size: 16px;
-line-height: 24px;
-color: #FFFFFF;
-:hover {
-background-color: #0080C1;
-}
+  margin-top: 10px;
+  width: 181px;
+  height: 50px;
+  background: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  :hover {
+    background-color: #0080c1;
+  }
 `;
 
 export const ModalReviews = styled.div`
   width: 100%;
   height: 495px;
+  overflow: auto;
 `;
 
 export const Review = styled.div`
@@ -205,11 +201,11 @@ export const Review = styled.div`
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 15px 0;
 `;
 
@@ -219,14 +215,14 @@ export const ReviewItem = styled.div`
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 `;
 export const ReviewLeftBlock = styled.div`
   margin-right: 12px;
@@ -235,13 +231,13 @@ export const ReviewImage = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #F0F0F0;
-  img: {
+  background-color: #f0f0f0;
+  img {
     display: block;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 `;
 export const ReviewRightBlock = styled.div`
@@ -253,7 +249,7 @@ export const ReviewName = styled.p`
   font-weight: 600;
   span: {
     margin-left: 10px;
-    color: #5F5F5F;
+    color: #5f5f5f;
   }
 `;
 export const ReviewTitle = styled.h5`

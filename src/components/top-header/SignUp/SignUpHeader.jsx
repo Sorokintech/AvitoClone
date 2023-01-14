@@ -4,6 +4,7 @@ import * as S from "./style";
 
 export const SignUpHeader = () => {
   const [modal, setModal] = useState(false);
+  // const [hidden, setHidden] = useState(false)
   const ref = useRef();
   function useOnClickOutside(ref, handler) {
     useEffect(
@@ -11,14 +12,18 @@ export const SignUpHeader = () => {
         const listener = (event) => {
           if (!ref.current || ref.current.contains(event.target)) {
             return;
+            
           }
           handler(event);
+          document.body.style.removeProperty('overflow');
         };
         document.addEventListener("mousedown", listener);
         document.addEventListener("touchstart", listener);
+        
         return () => {
           document.removeEventListener("mousedown", listener);
           document.removeEventListener("touchstart", listener);
+
         };
       },
       [ref, handler]
@@ -26,10 +31,11 @@ export const SignUpHeader = () => {
   }
   useOnClickOutside(ref, () => setModal(false));
 
-  const toggleModal = (event) => {
-    setModal(!modal);
-    console.log(event.target);
-  };
+  const toggleModal = () => {
+      setModal(!modal);
+      document.body.style.overflow = 'hidden';
+    };
+
   return (
     <S.Header >
       <S.HeaderNav>

@@ -1,17 +1,18 @@
+import React from "react";
 import * as S from "./style";
 
-export const AtSettingsModal = () => {
+export const AtSettingsModal = React.forwardRef((props, ref) => {
   return (
     <>
     <S.Wrapper>
       <S.Container>
-        <S.ModalBlock>
+        <S.ModalBlock ref={ref}> {props.children}
           <S.ModalContent>
             <S.ModalTitle>Редактировать объявление</S.ModalTitle>
             <S.ModalCloseButton>
               <S.ModalCloseButtonLine></S.ModalCloseButtonLine>
             </S.ModalCloseButton>
-            <S.FormAdd id="formNewArt" action="#">
+            <S.FormAdd>
               <S.FormBlock>
                 <label for="name">Название</label>
                 <S.FormInput
@@ -87,4 +88,4 @@ export const AtSettingsModal = () => {
     </S.Wrapper>
     </>
   );
-};
+});

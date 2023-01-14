@@ -17,7 +17,6 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
-  background: rgba(49, 49, 49, 0.8);
 `;
 export const ModalBlock = styled.div`
   position: absolute;
@@ -64,6 +63,7 @@ export const SignUpInput = styled.input`
   border-bottom: 1px solid #d0cece;
   padding: 8px 1px;
   margin-bottom: 38px;
+  outline: none;
   ::-webkit-input-placeholder {
     font-style: normal;
     font-weight: 400;
@@ -113,6 +113,12 @@ export const SignUpButton = styled.button`
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #fff;
   :active {
     background-color: #0080c1;
   }

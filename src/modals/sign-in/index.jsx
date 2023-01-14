@@ -1,22 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
-// import { SignUpModal } from "../../modals/sign-up/index";
+import { SignUpModal } from "../../modals/sign-up/index";
 import * as S from "./style";
 
 export const SignInModal = React.forwardRef((props, ref) => {
-  const ClickHandler = (e) => {
+  const [modal, setModal] = useState(false);
+  const toggleModal = (e) => {
     e.preventDefault();
-  };
-  const logger = (e) => {
-    console.log(e.target);
+    setModal(!modal);
   }
-
-
   return (
     <>
-      <S.Wrapper onClick={logger}>
+      <S.Wrapper>
         <S.Container>
           <S.ModalBlock ref={ref}> {props.children}
-            <S.ModalForm id="formLogUp" action="#">
+            <S.ModalForm>
               <S.ModalLogo src="img/logo_modal.png"></S.ModalLogo>
               <S.SignUpInput
                 type="text"
@@ -33,9 +30,12 @@ export const SignInModal = React.forwardRef((props, ref) => {
                 autoComplete="off"
               ></S.SignUpInput>
               <S.EnterButton id="SignUpEnter">Войти</S.EnterButton>
-              <S.SignUpButton onClick={ClickHandler} id="SignUpReg">
+              <S.SignUpButton onClick={toggleModal}>
                 Зарегистрироваться
               </S.SignUpButton>
+              {modal && (
+                <SignUpModal ref={ref}/>
+              )}
             </S.ModalForm>
           </S.ModalBlock>
         </S.Container>

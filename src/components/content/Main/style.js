@@ -98,11 +98,17 @@ export const CardTitle = styled.h3`
   margin-top: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration:none;
+  a {
+    color: #009EE4;
+  }
+
 `;
 
 export const CardPrice = styled.p`
     font-size: 16px;
     line-height: 24px;
+    font-weight: 800;
 `;
 export const CardPlace = styled.p`
   font-size: 16px;

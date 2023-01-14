@@ -1,19 +1,19 @@
 import React from "react";
 import * as S from "./style";
 
-export const ReviewsModal = () => {
+export const ReviewsModal = React.forwardRef((props, ref) => {
   return (
     <>
     <S.Wrapper>
       <S.Container>
-        <S.ModalBlock>
-          <S.ModalContent>
+        <S.ModalBlock ref={ref}>  {props.children}
+          <S.ModalContent >
             <S.ModalTitle>Отзывы о товаре</S.ModalTitle>
             <S.ModalCloseButton>
               <S.ModalCloseButtonLine>
               </S.ModalCloseButtonLine>
             </S.ModalCloseButton>
-            <S.FormAdd id="formNewArt" action="#">
+            <S.FormAdd>
               <S.FormBlock>
                 <label for="text">Добавить отзыв</label>
                 <S.FormArea
@@ -139,4 +139,4 @@ export const ReviewsModal = () => {
     </S.Wrapper>
     </>
   );
-};
+});
