@@ -1,6 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import * as S from "./style";
-import { Main } from "../../../pages/main";
 
 export const ArticleSearch = () => {
   return (
@@ -10,7 +10,7 @@ export const ArticleSearch = () => {
           <S.MainLogoImg src="img/logo.png" alt="logo"></S.MainLogoImg>
         </S.MenuLogoLink>
         <S.MenuForm action="#">
-          <S.ButtonMenu id="btnGoBack">Вернуться на главную</S.ButtonMenu>
+          <S.ButtonMenu id="btnGoBack"><NavLink to={'/'}>Вернуться на главную</NavLink></S.ButtonMenu>
         </S.MenuForm>
       </S.MainMenu>
     </S.MainContainer>

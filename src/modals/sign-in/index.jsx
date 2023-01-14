@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+// import { SignUpModal } from "../../modals/sign-up/index";
 import * as S from "./style";
 
 export const SignInModal = () => {
-
+  // const [modal, setModal] = useState(false);
+  // const toggleModal = () => {
+  //   setModal(!modal)
+  // }
+  const ClickHandler = (e) => {
+    e.preventDefault();
+  }
   return (
     <>
       <S.Wrapper >
@@ -26,10 +33,10 @@ export const SignInModal = () => {
 
               ></S.SignUpInput>
               <S.EnterButton id="SignUpEnter">
-                <a href="../index.html">Войти</a>{" "}
+               Войти
               </S.EnterButton>
-              <S.SignUpButton id="SignUpReg">
-                <a href="../index.html">Зарегистрироваться</a>{" "}
+              <S.SignUpButton onClick={ClickHandler} id="SignUpReg" >
+                Зарегистрироваться
               </S.SignUpButton>
             </S.ModalForm>
           </S.ModalBlock>

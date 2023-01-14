@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
 `;
 export const Container = styled.div`
-  max-width: 100%;
+  width: 100vw;
   height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  background-color: #f4f5f6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(49, 49, 49, 0.8);
 `;
 export const ModalBlock = styled.div`
   position: absolute;

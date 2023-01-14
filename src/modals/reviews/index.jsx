@@ -1,14 +1,17 @@
+import React from "react";
 import * as S from "./style";
 
 export const ReviewsModal = () => {
   return (
+    <>
     <S.Wrapper>
       <S.Container>
         <S.ModalBlock>
           <S.ModalContent>
-            <S.ModalTitle>Редактировать объявление</S.ModalTitle>
+            <S.ModalTitle>Отзывы о товаре</S.ModalTitle>
             <S.ModalCloseButton>
-              <S.ModalCloseButtonLine></S.ModalCloseButtonLine>
+              <S.ModalCloseButtonLine>
+              </S.ModalCloseButtonLine>
             </S.ModalCloseButton>
             <S.FormAdd id="formNewArt" action="#">
               <S.FormBlock>
@@ -134,5 +137,6 @@ export const ReviewsModal = () => {
         </S.ModalBlock>
       </S.Container>
     </S.Wrapper>
+    </>
   );
 };

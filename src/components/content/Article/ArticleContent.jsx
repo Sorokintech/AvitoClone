@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { ReviewsModal } from "../../../modals/reviews";
 import * as S from "./style";
 
 export const ArticleContent = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <S.Main>
       <S.ArticleContainer>
@@ -48,9 +55,14 @@ export const ArticleContent = () => {
               <S.ArticleInfo>
                 <S.ArticleDate>Сегодня в 10:45</S.ArticleDate>
                 <S.ArticleCity>Санкт-Петербург</S.ArticleCity>
-                <S.ArticleLink href="" target="_blank" rel="">
+                <S.ArticleLink onClick={toggleModal}>
                   23 отзыва
                 </S.ArticleLink>
+                {modal && (
+                  <>
+                  <ReviewsModal/>
+                  </>
+                )}
               </S.ArticleInfo>
               <S.ArticlePrice>2 200 ₽</S.ArticlePrice>
               <S.ArticleButton>

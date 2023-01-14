@@ -1,6 +1,14 @@
+import React, {useState} from 'react';
+import { AtSettingsModal } from '../../../modals/atclsettings';
 import * as S from "./style";
 
 export const MyArticleContent = () => {
+
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal)
+  }
   return (
     <S.Main>
       <S.ArticleContainer>
@@ -53,7 +61,8 @@ export const MyArticleContent = () => {
               </S.ArticleInfo>
               <S.ArticlePrice>2 200 ₽</S.ArticlePrice>
               <S.ButtonBlock>
-                <S.EditButton>Редактировать</S.EditButton>
+                <S.EditButton onClick={toggleModal}>Редактировать</S.EditButton>
+                {modal && (<AtSettingsModal/>)}
                 <S.RemoveButton>Снять с публикации</S.RemoveButton>
               </S.ButtonBlock>
 

@@ -2,7 +2,7 @@ import * as S from "./style";
 
 export const AddNewModal = () => {
     return(
-
+        <>
         <S.Wrapper>
         <S.Container>
             <S.ModalBlock>
@@ -58,5 +58,6 @@ export const AddNewModal = () => {
             </S.ModalBlock>
         </S.Container>
     </S.Wrapper>
+    </>
     );
 };

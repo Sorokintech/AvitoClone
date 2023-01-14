@@ -8,9 +8,6 @@ export const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
-  /* width: 100%;
-  min-height: 100%;
-  overflow: hidden; */
 `;
 export const Container = styled.div`
   width: 100vw;
@@ -20,11 +17,6 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
-  /* max-width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative; */
-  /* background-color: #f4f5f6; */
   background: rgba(49, 49, 49, 0.8);
 `;
 
@@ -34,6 +26,7 @@ export const ModalBlock = styled.div`
   left: calc(50% - (366px / 2));
   top: calc(50% - (647px / 2));
   opacity: 1;
+  scroll-behavior: auto;
 `;
 export const ModalForm = styled.form`
   width: 366px;
@@ -129,30 +122,16 @@ export const SignUpButton = styled.button`
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05px;
   :active {
     background-color: #d9d9d9;
   }
   :hover {
     background-color: #f4f5f6;
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.05px;
-    color: #000000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 `;
 export const EnterButton = styled.div`
@@ -162,6 +141,12 @@ export const EnterButton = styled.div`
   border-radius: 6px;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #fff;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,29 +157,11 @@ export const EnterButton = styled.div`
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  cursor: pointer;
   :active {
     background-color: #0080c1;
   }
   :hover {
     background-color: #0080c1;
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.05px;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 `;

@@ -1,23 +1,38 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  /* width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow: hidden; */
 `;
 
 export const Container = styled.div`
-  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(49, 49, 49, 0.8);
+  /* max-width: 100%;
   height: 100vh;
   margin: 0 auto;
   position: relative;
-  background-color: #F4F5F6;
+  background-color: #F4F5F6; */
 `;
 
 export const ModalBlock = styled.div`
   position: absolute;
   z-index: 5;
-  left: calc(50% - (600px/2));
+  left: calc(50% - (700px/2));
   top: 60px;
   opacity: 1;
 `;
@@ -33,7 +48,7 @@ export const ModalContent = styled.div`
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 600px;
+  width: 700px;
   height: auto;
   padding: 32px 50px 42px;
   background-color: #FFFFFF;
