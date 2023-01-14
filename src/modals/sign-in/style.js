@@ -1,17 +1,33 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  /* width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow: hidden; */
 `;
 export const Container = styled.div`
-  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  /* max-width: 100%;
   height: 100vh;
   margin: 0 auto;
-  position: relative;
-  background-color: #f4f5f6;
+  position: relative; */
+  /* background-color: #f4f5f6; */
+  background: rgba(49, 49, 49, 0.8);
 `;
+
 export const ModalBlock = styled.div`
   position: absolute;
   z-index: 2;
@@ -21,7 +37,6 @@ export const ModalBlock = styled.div`
 `;
 export const ModalForm = styled.form`
   width: 366px;
-  height: 647px;
   background-color: #ffffff;
   border-radius: 12px;
   display: -webkit-box;
@@ -44,7 +59,7 @@ export const ModalLogo = styled.img`
   height: 21px;
   margin-bottom: 42px;
   background-color: transparent;
-  img: {
+  img {
     width: 140px;
     height: auto;
   }
@@ -57,6 +72,8 @@ export const SignUpInput = styled.input`
   border-bottom: 1px solid #d0cece;
   padding: 8px 1px;
   margin-bottom: 38px;
+  outline: none;
+
   ::-webkit-input-placeholder {
     font-style: normal;
     font-weight: 400;
@@ -88,5 +105,96 @@ export const SignUpInput = styled.input`
     line-height: 24px;
     letter-spacing: -0.05px;
     color: #d0cece;
+  }
+`;
+
+export const SignUpButton = styled.button`
+  width: 278px;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #d0cece;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  :active {
+    background-color: #d9d9d9;
+  }
+  :hover {
+    background-color: #f4f5f6;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+`;
+export const EnterButton = styled.div`
+  width: 278px;
+  height: 52px;
+  background-color: #009ee4;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  :active {
+    background-color: #0080c1;
+  }
+  :hover {
+    background-color: #0080c1;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 `;

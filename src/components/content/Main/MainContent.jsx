@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./style";
 
 export const MainContent = () => {
+
   return (
     <S.Container>
       <S.Header>Объявления</S.Header>
