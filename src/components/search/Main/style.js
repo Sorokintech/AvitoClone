@@ -43,6 +43,7 @@ export const SearchText = styled.input`
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    outline:none;
     ::-webkit-input-placeholder {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.3);

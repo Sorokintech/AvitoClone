@@ -152,6 +152,10 @@ export const ButtonMenu = styled.button`
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+  a {
+    text-decoration:none;
+    color: #FFFFFF;
+  }
   :hover {
   background-color: #0080C1;
 }

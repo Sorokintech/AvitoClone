@@ -51,6 +51,10 @@ export const PortalButton = styled.button`
   font-size: 16px;
   line-height: 1;
   text-decoration: none;
+  a {
+    text-decoration:none;
+    color: #FFFFFF;
+  }
   :hover {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid #FFFFFF;
