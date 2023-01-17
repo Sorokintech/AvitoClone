@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { ReviewsModal } from "../../../modals/reviews";
 import * as S from "./style";
 
@@ -96,7 +97,7 @@ export const ArticleContent = () => {
                   <img src="" alt=""></img>
                 </S.AuthorImage>
                 <S.AuthorContent>
-                  <S.AuthorName>Кирилл</S.AuthorName>
+                  <S.AuthorName><NavLink to={'/seller'}>Кирилл</NavLink></S.AuthorName>
                   <S.AuthorAbout>Продает товары с августа 2021</S.AuthorAbout>
                 </S.AuthorContent>
               </S.ArticleAuthor>

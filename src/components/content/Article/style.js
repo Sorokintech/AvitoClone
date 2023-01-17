@@ -210,6 +210,9 @@ export const AuthorName = styled.p`
   line-height: 26px;
   font-weight: 600;
   color: #009EE4;
+  a {
+    color: #009EE4;
+  }
 `
 export const AuthorAbout = styled.p`
   font-size: 16px;

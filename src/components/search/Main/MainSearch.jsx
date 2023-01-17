@@ -1,7 +1,20 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { search } from "../../../store/slices/search";
 import * as S from "./style";
 
 export const MainSearch = () => {
+
+  const dispatch = useDispatch();
+
+  const onChangeHandler = (e) => {
+    dispatch(search((e.target).value));
+  };
+
+  const findHandler = (e) => {
+    e.preventDefault();
+    
+  }
   return (
     <S.Search>
       <S.SearchLogoLink href="#" target="_blank">
@@ -18,13 +31,14 @@ export const MainSearch = () => {
           type="search"
           placeholder="Поиск по объявлениям"
           name="search"
+          onChange={onChangeHandler}
         ></S.SearchText>
         <S.SearchTextMob
           type="search"
           placeholder="Поиск"
           name="search-mob"
         ></S.SearchTextMob>
-        <S.Button>Найти</S.Button>
+        <S.Button onClick={findHandler}>Найти</S.Button>
       </S.SearchForm>
     </S.Search>
   );
