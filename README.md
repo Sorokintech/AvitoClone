@@ -12,11 +12,14 @@ This project is a solo mission.
 
 ## Projects Stack
 
-This project has been built with  the following technologies and libraries:
-1. React
-2. Redux, React-redux, reduxjs/toolkit
-3. Libraries: react-toastify. date-fns
-4. Styled Components for CSS
+This project has been built using the following:
+•React
+•Redux
+•React-redux
+•reduxjs/toolkit
+•react-toastify
+•date-fns
+•styled components
 
 ## Backend
 
