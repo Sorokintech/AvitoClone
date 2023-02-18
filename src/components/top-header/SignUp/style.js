@@ -17,6 +17,9 @@ export const HeaderNav = styled.nav`
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
+  @media (max-width: 767px) {
+      display: none;
+    }
 `;
 export const Button = styled.button`
   width: 224px;

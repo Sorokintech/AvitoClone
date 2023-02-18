@@ -1,11 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
-import { SignInModal } from "../../../modals/sign-in";
+import { useDebugValue } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SignInModal } from "../../../modals/sign-in";   
+import { SignUpModal } from "../../../modals/sign-up";
+import { signInActive, signUpActive } from "../../../store/slices/auth";
 import * as S from "./style";
 
 export const SignUpHeader = () => {
-  const [modal, setModal] = useState(false);
-  // const [hidden, setHidden] = useState(false)
+  const modalSignInActive = useSelector((state) => state.auth.signInActive)
+  const modalSignUpActive = useSelector((state) => state.auth.signUpActive)
   const ref = useRef();
+  const dispatch = useDispatch();
   function useOnClickOutside(ref, handler) {
     useEffect(
       () => {
@@ -29,10 +34,10 @@ export const SignUpHeader = () => {
       [ref, handler]
     );
   }
-  useOnClickOutside(ref, () => setModal(false));
+  useOnClickOutside(ref, () => dispatch(signInActive(false)));
 
   const toggleModal = () => {
-      setModal(!modal);
+      dispatch(signInActive(true))
       document.body.style.overflow = 'hidden';
     };
 
@@ -42,9 +47,14 @@ export const SignUpHeader = () => {
         <S.Button id="btnMainEnter"  onClick={toggleModal}>
           Вход в личный кабинет
         </S.Button>
-        {modal && (
+        {modalSignInActive && (
           <>
             <SignInModal ref={ref} />
+          </>
+        )}
+        {modalSignUpActive && (
+          <>
+            <SignUpModal ref={ref} />
           </>
         )}
       </S.HeaderNav>

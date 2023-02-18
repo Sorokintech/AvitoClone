@@ -7,7 +7,11 @@ export const Wrapper = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
   position: fixed;
+  @media (max-width: 767px) {
+    position: relative;
+  }
 `;
 export const Container = styled.div`
   width: 100vw;
@@ -18,6 +22,10 @@ export const Container = styled.div`
   bottom: 0;
   position: fixed;
   background: rgba(49, 49, 49, 0.8);
+  @media (max-width: 767px) {
+    position: relative;
+    background: transparent;
+  }
 `;
 
 export const ModalBlock = styled.div`
@@ -66,6 +74,14 @@ export const SignUpInput = styled.input`
   padding: 8px 1px;
   margin-bottom: 38px;
   outline: none;
+  @media (max-width: 767px) {
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  }
 
   ::-webkit-input-placeholder {
     font-style: normal;
@@ -133,6 +149,9 @@ export const SignUpButton = styled.button`
   :hover {
     background-color: #f4f5f6;
   }
+  @media (max-width: 767px) {
+    text-decoration: none;
+  }
 `;
 export const EnterButton = styled.div`
   width: 278px;
@@ -157,7 +176,7 @@ export const EnterButton = styled.div`
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: pointer; 
   :active {
     background-color: #0080c1;
   }
@@ -165,3 +184,7 @@ export const EnterButton = styled.div`
     background-color: #0080c1;
   }
 `;
+export const ErrorForm = styled.p`
+  text-align:center;
+  color: #ff0016;
+`

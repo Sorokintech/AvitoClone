@@ -8,9 +8,14 @@ export const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
+  z-index: 1;
   /* width: 100%;
   min-height: 100%;
   overflow: hidden; */
+  @media (max-width: 767px) {
+    position: relative;
+    width: 100%;
+  }
 `;
 
 export const Container = styled.div`
@@ -27,6 +32,12 @@ export const Container = styled.div`
   margin: 0 auto;
   position: relative;
   background-color: #F4F5F6; */
+  @media (max-width: 767px) {
+    position: relative;
+    background: transparent;
+    z-index: 0;
+    overflow: scroll;
+  }
 `;
 
 export const ModalBlock = styled.div`
@@ -35,7 +46,32 @@ export const ModalBlock = styled.div`
   left: calc(50% - (600px/2));
   top: 60px;
   opacity: 1;
+  @media (max-width: 767px) {
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    }
+  
 `;
+export const TopContainer = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: row; 
+  }
+`
+export const GoBackButton = styled.button`
+  display: none;
+  @media (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 50px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+  }
+`
 
 export const ModalContent = styled.div`
   display: -webkit-box;
@@ -54,6 +90,12 @@ export const ModalContent = styled.div`
   background-color: #FFFFFF;
   border-radius: 12px;
   position: relative;
+  @media (max-width: 767px) {
+    // display:block;
+    position:relative;
+    width:100%;
+    padding: 18px;
+  }
 `;
 
 
@@ -75,6 +117,9 @@ export const ModalCloseButton = styled.div`
   right: 50px;
   z-index: 3;
   cursor: pointer;
+  @media (max-width: 767px) {
+    display:none;
+  }
 `;
 export const ModalCloseButtonLine = styled.div`
   position: relative;
@@ -114,7 +159,16 @@ export const ModalCloseButtonLine = styled.div`
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+@media (max-width: 767px) {
+    display:none;
+  }
 `;
+export const Label = styled.label`
+@media (max-width: 767px) {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+`
 export const FormAdd = styled.div`
   margin-top: 22px;
   display: -webkit-box;
@@ -137,6 +191,7 @@ export const FormBlock = styled.div`
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 20px;
+  
 `;
 export const FormBlockPrice = styled.div`
   width: 100%;
@@ -149,6 +204,7 @@ export const FormBlockPrice = styled.div`
           flex-direction: column;
   margin-bottom: 20px;
   position: relative;
+
 `;
 export const FormInput = styled.input`
   padding: 13px 19px;
@@ -166,8 +222,18 @@ export const FormInput = styled.input`
   font-size: 16px;
   line-height: 24px;
   color: #0000004D;
-
+  :hover {
+    border: solid 1px #009EE4;
+  }
 }
+@media (max-width: 767px) {
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  }
 
 `;
 export const FormArea = styled.textarea`
@@ -189,7 +255,19 @@ export const FormArea = styled.textarea`
   font-size: 16px;
   line-height: 24px;
   color: #0000004D;
+  :hover {
+    border: solid 1px #009EE4;
+  }
 }
+@media (max-width: 767px) {
+    max-height: 120px;
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  }
 
 `
 export const FormPrice = styled.input`
@@ -203,6 +281,16 @@ export const FormPrice = styled.input`
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  :hover {
+    border: 1px 1px 	rgba(0, 158, 228);
+  }
+  :active {
+    border: 1px 1px 	rgba(0, 158, 228);
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 10px;
+  }
 `;
 export const FormPriceCover = styled.div`
   width: 24px;
@@ -232,11 +320,18 @@ export const FormText = styled.p`
   line-height: 24px;
   color: #000000;
   margin-bottom: 10px;
-  span: {
-  margin-left: 10px;
-  color: rgba(0, 0, 0, 0.3);
-}
+  @media (max-width: 767px) {
+  display: flex;
+  flex-direction:column;
+  }
+
+
 `;
+export const Span = styled.span`
+    color: rgba(0, 0, 0, 0.3);
+@media (max-width: 767px) {
+  }
+`
 
 export const FormImageBlock = styled.div`
   width: 500px;
@@ -255,6 +350,11 @@ export const FormImageBlock = styled.div`
           justify-content: space-between;
   margin-bottom: 10px;
   overflow: hidden;
+@media (max-width: 767px) {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
 `;
 export const FormImage = styled.div`
   width: 90px;
@@ -270,8 +370,18 @@ export const FormImage = styled.div`
      object-fit: cover;
   z-index: 2;
 }
+
 `
-export const FormImageCover = styled.div`
+export const Image = styled.img`
+position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1;
+`
+export const FormImageCover = styled.label`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -279,6 +389,8 @@ export const FormImageCover = styled.div`
   left: 0;
   background-color: #F0F0F0;
   z-index: -1;
+
+  cursor: pointer;
   ::after {
   content: "";
   position: absolute;
@@ -301,13 +413,14 @@ export const FormImageCover = styled.div`
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
+
 `;
 
 export const PublishButton = styled.button`
   margin-top: 10px;
   width: 181px;
   height: 50px;
-  background: #D9D9D9;
+  background: #009EE4;
   border: 1px solid #D9D9D9;
   border-radius: 6px;
   font-size: 16px;
@@ -316,4 +429,23 @@ export const PublishButton = styled.button`
   :hover {
   background-color: #0080C1;
 }
+@media (max-width: 767px) {
+  width:100%;
+  margin-bottom: 100px;
+}
+`
+export const FileInput = styled.input`
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+  @media (max-width: 767px) {
+    width:100%;
+    
+  }
+`
+export const FileLabel = styled.label`
+
 `

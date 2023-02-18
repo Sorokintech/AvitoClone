@@ -15,7 +15,6 @@ export const Profile = () => {
           <ProfileInfo />
           <Items/>
         </S.SmallContainer>
-       
         <Footer />
       </S.Container>
     </S.Wrapper>

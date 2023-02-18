@@ -15,6 +15,12 @@ export const Search = styled.div`
   max-width: 1178px;
   margin: 0 auto;
   padding: 31px 10px 0px;
+  @media (max-width: 767px) {
+    background-color: #009ee4;
+    padding: 0;
+    margin-left: 0;
+    
+  }
 `;
 export const SearchLogoLink = styled.a``;
 export const SearchLogoLinkMob = styled.a`
@@ -28,6 +34,9 @@ export const SearchForm = styled.form`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  @media (max-width: 767px) {
+    margin-left: 0px;
+  }
 `;
 export const SearchText = styled.input`
     width: 100%;
@@ -43,6 +52,12 @@ export const SearchText = styled.input`
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    @media (max-width: 767px) {
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 11px 18px;
+    padding: 5px 15px;
+  }
     ::-webkit-input-placeholder {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.3);
@@ -87,6 +102,7 @@ export const SearchTextMob = styled.input`
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+    display: none;
 `;
 export const Button = styled.button`
   margin-left: 10px;
@@ -102,16 +118,33 @@ export const Button = styled.button`
   background-color: #0080C1;
   
 }
+@media (max-width: 767px) {
+    display: none;
+  }
 `;
 export const SearchLogoImg = styled.img`
   width: 54px;
   height: auto;
+  @media (max-width: 767px) {
+    width: 52px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 9px;
+    margin-left:10px;
+  }
 `;
 
 export const MainContainer = styled.div`
   max-width: 1178px;
   margin: 0 auto;
   padding: 0px 5px;
+  @media (max-width: 767px) {
+    background-color: #009ee4;
+    padding: 0;
+    margin: 0;  
+    
+  }
 `;
 export const MainMenu = styled.div`
   width: 100%;
@@ -126,6 +159,12 @@ export const MainMenu = styled.div`
           justify-content: space-between;
   padding: 11px 0;
   padding: 43px 5px 77px;
+  @media (max-width: 767px) {
+    padding: 11px;
+    margin: 0;
+    background-color: #009ee4;
+    
+  }
 `;
 export const MenuLogoLink = styled.a`
   width: 54;
@@ -134,6 +173,14 @@ export const MenuLogoLink = styled.a`
 export const MainLogoImg = styled.img`
   width: 54px;
   height: auto;
+  @media (max-width: 767px) {
+    width: 52px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 9px;
+    margin-left:10px;
+  }
 `;
 export const MenuForm = styled.form`
   margin-left: 60px;
@@ -142,6 +189,9 @@ export const MenuForm = styled.form`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 `;
 export const ButtonMenu = styled.button`
   width: 241px;
@@ -159,4 +209,7 @@ export const ButtonMenu = styled.button`
   :hover {
   background-color: #0080C1;
 }
+@media (max-width: 767px) {
+    display: none;
+  }
 `;

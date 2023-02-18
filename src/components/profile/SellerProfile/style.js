@@ -11,13 +11,24 @@ export const Header = styled.h2`
   border-top: 2px solid #0080C1;
   border-left: 2px solid #0080C1;
 }
+@media (max-width: 767px) {
+    font-size: 30px;
+    padding-top: 30px;
+  }
 `;
 export const Profile = styled.div`
   width: 100%;
   padding: 0 0 70px;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+    margin: 0;
+  }
 `;
 export const ProfileContent = styled.div`
   width: 100%;
+  @media (max-width: 767px) {
+    width: auto;
+  }
 `;
 export const Seller = styled.div`
   display: -webkit-box;
@@ -29,7 +40,18 @@ export const Seller = styled.div`
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+    @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
+export const RightBlockButtom = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+@media (max-width: 767px) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+`
 
 export const SellerLeftBlock = styled.div`
   display: -webkit-box;
@@ -43,6 +65,28 @@ export const SellerLeftBlock = styled.div`
       -ms-flex-align: center;
           align-items: center;
   margin-right: 50px;
+  @media (max-width: 767px) {
+    margin: 0;
+  }
+`
+export const TopContainer = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: row; 
+  }
+`
+export const GoBackButton = styled.button`
+  display: none;
+  @media (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 50px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    padding-left: 15px;
+  }
 `
 export const SellerImage = styled.div`
   width: 170px;
@@ -50,7 +94,8 @@ export const SellerImage = styled.div`
   border-radius: 50%;
   background-color: #F0F0F0;
   img {
-    width: 100%;
+  border-radius: 50%;
+  width: 100%;
   height: auto;
   display: block;
   -o-object-fit: cover;
@@ -60,6 +105,11 @@ export const SellerImage = styled.div`
 
 export const SellerRightBlock = styled.div`
   width: auto;
+  @media (max-width: 767px) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.h3`
@@ -105,4 +155,10 @@ export const SellerShowButton = styled.button`
   :hover {
   background-color: #0080C1;
 }
+@media (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
   `

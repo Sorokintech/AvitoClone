@@ -1,16 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { modalSettings } from "../../store/slices/modal";
+import { setCurrentArticle } from "../../store/slices/article";
+
 import * as S from "./style";
+import { useChangeAdMutation, useGetAllAdsQuery, useGetAdsQuery } from "../../store/services";
 
 export const AtSettingsModal = React.forwardRef((props, ref) => {
+  const history = useNavigate();
+  const dispatch = useDispatch();
+  const location = useLocation();
+  // const currentItem = useSelector((state) => state.current.id)
+  // const { id } = location.state;
+
+  const {title :adTitle, price: adPrice, user, description: adDescription, created_on, user_id, images, id} = useSelector(state => state.current ?? {});
+  const {data: dataArticle, isSuccess: isSuccessFetchArticle} = useGetAdsQuery(id);
+  const [title, setTitle] = useState(adTitle);
+  const [price, setPrice] = useState(adPrice);
+  const [description, setDescription] = useState();
+
+  const closingModal = ()  => {
+      dispatch(modalSettings(false));
+  }
+  const [changeAd, {data, isSuccess}] = useChangeAdMutation();
+  const adChangeHandler = () => {
+      changeAd({title, price, description, id})
+      history('/article/:id');
+  }
+
+  useEffect(() => {
+    if(isSuccess){
+      dispatch(setCurrentArticle(data));
+      dispatch(modalSettings(false));
+    }
+  }, [data, dispatch, isSuccess])
+  const topBtnHandler = () => {
+    history('/article/:id');
+  }
   return (
     <>
     <S.Wrapper>
       <S.Container>
         <S.ModalBlock ref={ref}> {props.children}
           <S.ModalContent>
+          <S.TopContainer>
+            <S.GoBackButton onClick={topBtnHandler}>〱</S.GoBackButton>
             <S.ModalTitle>Редактировать объявление</S.ModalTitle>
+            </S.TopContainer>
             <S.ModalCloseButton>
-              <S.ModalCloseButtonLine></S.ModalCloseButtonLine>
+              <S.ModalCloseButtonLine onClick={closingModal}></S.ModalCloseButtonLine>
             </S.ModalCloseButton>
             <S.FormAdd>
               <S.FormBlock>
@@ -20,7 +59,8 @@ export const AtSettingsModal = React.forwardRef((props, ref) => {
                   name="name"
                   id="formName"
                   placeholder="Введите название"
-                  value="Ракетка для большого тенниса Triumph Pro STС Б/У"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                 ></S.FormInput>
               </S.FormBlock>
               <S.FormBlock>
@@ -30,16 +70,10 @@ export const AtSettingsModal = React.forwardRef((props, ref) => {
                   id="formArea"
                   cols="auto"
                   rows="10"
-                  placeholder="Введите описание"
+                  placeholder={"Введите описание"}
+                  onChange={(e) => setDescription(e.target.value)}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                 {adDescription}
                 </S.FormArea>
               </S.FormBlock>
               <S.FormBlock>
@@ -75,12 +109,13 @@ export const AtSettingsModal = React.forwardRef((props, ref) => {
                   type="text"
                   name="price"
                   id="formName"
-                  value="2 200"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
                 ></S.FormPrice>
                 <S.FormPriceCover></S.FormPriceCover>
               </S.FormBlockPrice>
 
-              <S.PublishButton id="btnPublish">Сохранить</S.PublishButton>
+              <S.PublishButton id="btnPublish" onClick={adChangeHandler}>Сохранить</S.PublishButton>
             </S.FormAdd>
           </S.ModalContent>
         </S.ModalBlock>
