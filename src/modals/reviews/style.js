@@ -9,7 +9,11 @@ export const Wrapper = styled.div`
   bottom: 0;
   position: fixed;
   overflow: auto;
+
   scroll-behavior: auto;
+  @media (max-width: 767px) {
+    position: relative;
+  }
 `;
 
 export const Container = styled.div`
@@ -22,7 +26,32 @@ export const Container = styled.div`
   position: fixed;
   background: rgba(49, 49, 49, 0.8);
   overflow: auto;
+  @media (max-width: 767px) {
+    position: relative;
+    background: transparent;
+    z-index: 0;
+    overflow: scroll;
+  }
 `;
+
+export const TopContainer = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: row; 
+  }
+`
+export const GoBackButton = styled.button`
+  display: none;
+  @media (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 50px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+  }
+`
 
 export const ModalBlock = styled.div`
   position: absolute;
@@ -30,6 +59,12 @@ export const ModalBlock = styled.div`
   left: calc(50% - (700px / 2));
   top: 60px;
   opacity: 1;
+  @media (max-width: 767px) {
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    }
 `;
 
 export const ModalContent = styled.div`
@@ -49,6 +84,11 @@ export const ModalContent = styled.div`
   background-color: #ffffff;
   border-radius: 12px;
   position: relative;
+  @media (max-width: 767px) {
+    display:block;
+    width:100%;
+    padding: 18px;
+  }
 `;
 
 export const ModalTitle = styled.h3`
@@ -61,6 +101,11 @@ export const ModalTitle = styled.h3`
     border-left: 2px solid #0080c1;
   }
 `;
+export const titleLabel = styled.label`
+@media (max-width: 767px) {
+display: none;
+  }
+`
 export const ModalCloseButton = styled.div`
   width: 23px;
   height: 23px;
@@ -69,6 +114,9 @@ export const ModalCloseButton = styled.div`
   right: 50px;
   z-index: 3;
   cursor: pointer;
+  @media (max-width: 767px) {
+    display:none;
+  }
 `;
 export const ModalCloseButtonLine = styled.div`
   position: relative;
@@ -108,6 +156,9 @@ export const ModalCloseButtonLine = styled.div`
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+  @media (max-width: 767px) {
+    display:none;
+  }
 `;
 export const FormAdd = styled.div`
   margin-top: 22px;
@@ -132,6 +183,9 @@ export const FormBlock = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
   outline: none;
+  @media (max-width: 767px) {
+    
+    }
 `;
 
 export const FormInput = styled.input`
@@ -151,6 +205,14 @@ export const FormInput = styled.input`
     line-height: 24px;
     color: #0000004d;
     outline: none;
+  }
+  @media (max-width: 767px) {
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin-bottom: 14px;
   }
 `;
 export const FormArea = styled.textarea`
@@ -174,19 +236,33 @@ export const FormArea = styled.textarea`
     color: #0000004d;
     outline: none;
   }
+  @media (max-width: 767px) {
+    max-height: 100px;
+    width: 100%;
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin: 0;
+  }
 `;
 export const PublishButton = styled.button`
   margin-top: 10px;
   width: 181px;
   height: 50px;
-  background: #d9d9d9;
+  background: #0080c1;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
   :hover {
-    background-color: #0080c1;
+    background-color: #001281c1 ;
+  }
+  @media (max-width: 767px) {
+    display:block;
+    width:100%;
   }
 `;
 
@@ -194,6 +270,9 @@ export const ModalReviews = styled.div`
   width: 100%;
   height: 495px;
   overflow: auto;
+  @media (max-width: 767px) {
+    height: auto;
+  }
 `;
 
 export const Review = styled.div`
@@ -205,7 +284,7 @@ export const Review = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 15px 0;
 `;
 
@@ -232,6 +311,7 @@ export const ReviewImage = styled.div`
   height: 40px;
   border-radius: 50%;
   background-color: #f0f0f0;
+  overflow: hidden;
   img {
     display: block;
     width: 100%;
@@ -247,13 +327,20 @@ export const ReviewRightBlock = styled.div`
 export const ReviewName = styled.p`
   margin-bottom: 12px;
   font-weight: 600;
-  span: {
+  span {
     margin-left: 10px;
     color: #5f5f5f;
-  }
+}
+
 `;
 export const ReviewTitle = styled.h5`
   font-weight: 600;
+  @media (max-width: 767px) {
+    font-weight: 800;
+    font-size: 18px;
+    padding-top: 15px;
+  }
+  
 `;
 export const ReviewText = styled.p`
   font-size: 16px;

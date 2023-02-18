@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   margin: 0 auto;
+  @media (max-width: 767px) {
+  }
 `
 
 export const ArticleContainer = styled.div`
@@ -9,6 +11,11 @@ export const ArticleContainer = styled.div`
   padding: 0 0 70px;
   margin: 0 auto;
   padding: 0 5px 70px;
+  @media (max-width: 767px) {
+   margin: 0;
+   padding: 0;
+  }
+
 `
 
 export const ArticleContent = styled.div`
@@ -21,14 +28,33 @@ export const ArticleContent = styled.div`
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  @media (max-width: 767px) {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  }
 `;
 
 export const ArticleLeftBlock = styled.div`
   max-width: 480px;
   margin-right: 54px;
+  @media (max-width: 767px) {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  }
 `
 export const ArticleRightBlock = styled.div`
   max-width: 621px;
+  @media (max-width: 767px) {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  }
 `
 
 export const ArticleFillImg = styled.div`
@@ -54,11 +80,18 @@ export const ArticleImage = styled.div`
   height: 480px;
   background-color: #F0F0F0;
   margin: 0 5px;
+  @media (max-width: 767px) {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 320px;
+  }
+
 `
 
 export const ChildrenImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -82,6 +115,9 @@ export const ArticleImageBar = styled.div`
           justify-content: left;
   overflow: hidden;
   margin-left: -5px;
+  @media (max-width: 767px) {
+  display: none;
+  }
 `
 
 export const BarImageDiv = styled.div`
@@ -98,6 +134,7 @@ export const BarImageDiv = styled.div`
   -o-object-fit: cover;
      object-fit: cover;
   }
+
 `
 export const BarMob = styled.div`
   display: none;
@@ -115,6 +152,9 @@ export const RightBlockContent = styled.div`
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  @media (max-width: 767px) {
+  padding: 10px 20px;
+  }
 `
 export const ArticleTitle = styled.h3`
   margin-bottom: 10px;
@@ -122,9 +162,17 @@ export const ArticleTitle = styled.h3`
     line-height: 46px;
     font-weight: 700;
     color: #000000;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 34px;
+      padding-bottom: 5px;
+  }
 `
 export const ArticleInfo = styled.div`
   margin-bottom: 34px;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 `
 
 export const ArticleDate = styled.p`
@@ -132,6 +180,9 @@ export const ArticleDate = styled.p`
   line-height: 21px;
   color: #5F5F5F;
   margin-bottom: 4px;
+  @media (max-width: 767px) {
+
+  }
 `
 
 export const ArticleCity = styled.p`
@@ -173,6 +224,9 @@ export const ArticleButton = styled.button`
   :hover {
   background-color: #0080C1;
 }
+  @media (max-width: 767px) {
+    width: 100%;
+}
 `
 
 export const ArticleAuthor = styled.div`
@@ -198,6 +252,7 @@ export const AuthorImage = styled.div`
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   }
@@ -224,6 +279,10 @@ export const DescriptionContainer = styled.div`
     max-width: 1178px;
     margin: 0 auto;
     padding: 0px 5px;
+    @media (max-width: 767px) {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
 `
 export const DescriptionContainerTitle = styled.h3`
   margin-bottom: 32px;
@@ -243,3 +302,12 @@ export const DescriptionText = styled.p`
   line-height: 24px;
   color: #000000;
   `
+
+export const ButtonsDiv = styled.div`
+  display: flex;
+  gap:10px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+`

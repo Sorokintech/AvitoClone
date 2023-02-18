@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import getCookie from '../../utils/getCookie';
+import getCookie from '../getCookie';
 
 
 const initialState = {
   token: getCookie('token'),
   isLogin: Boolean(getCookie('username')),
   id: getCookie('id'),
+  signInActive: false,
+  signUpActive: false
 };
 
 export const authSlice = createSlice({
@@ -19,12 +21,19 @@ export const authSlice = createSlice({
     setLogout: (state) => {
       state.isLogin = false;
       state.token = '';
+      state.id = '';
     },
     setToken: (state, action) => {
       state.token = action.payload;
+    },
+    signInActive: (state, action) => {
+      state.signInActive = action.payload;
+    },
+    signUpActive: (state, action) => {
+      state.signUpActive = action.payload;
     }
   }
 });
 
-export const { setLogin, setToken, setLogout } = authSlice.actions;
+export const { setLogin, setToken, setLogout, signInActive, signUpActive } = authSlice.actions;
 export default authSlice.reducer;

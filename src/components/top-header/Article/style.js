@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.div`
   background-color: #009EE4;
+  
 `;
 
 export const Nav = styled.nav`
@@ -18,6 +19,9 @@ export const Nav = styled.nav`
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  @media (max-width: 767px) {
+      display: none;
+    }
 `;
 
 export const Logo = styled.div`

@@ -7,7 +7,11 @@ export const Wrapper = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
   position: fixed;
+  @media (max-width: 767px) {
+    position: relative;
+  }
 `;
 export const Container = styled.div`
   width: 100vw;
@@ -17,6 +21,13 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   position: fixed;
+  background: rgba(49, 49, 49, 0.8);
+  @media (max-width: 767px) {
+    position: relative;
+    background: transparent;
+    z-index: 0;
+    overflow: scroll;
+  }
 `;
 export const ModalBlock = styled.div`
   position: absolute;
@@ -24,10 +35,14 @@ export const ModalBlock = styled.div`
   left: calc(50% - (366px / 2));
   top: calc(50% - (647px / 2));
   opacity: 1;
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+  
 `;
 export const ModalForm = styled.form`
   width: 366px;
-  height: 647px;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 12px;
   display: -webkit-box;
@@ -44,6 +59,9 @@ export const ModalForm = styled.form`
   :first-child {
     margin-bottom: 30px;
   }
+  @media (max-width: 767px) {
+    padding-top: 20px;
+  }
 `;
 export const ModalLogo = styled.img`
   width: 140px;
@@ -53,6 +71,9 @@ export const ModalLogo = styled.img`
   img: {
     width: 140px;
     height: auto;
+  }
+  @media (max-width: 767px) {
+    margin-bottom:30px;
   }
 `;
 export const SignUpInput = styled.input`
@@ -64,6 +85,14 @@ export const SignUpInput = styled.input`
   padding: 8px 1px;
   margin-bottom: 38px;
   outline: none;
+  @media (max-width: 767px) {
+    display:block;
+    background: transparent;
+    border: solid 1px #d0cece;
+    padding: 14px 20px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  } 
   ::-webkit-input-placeholder {
     font-style: normal;
     font-weight: 400;
@@ -145,3 +174,8 @@ export const SignUpButton = styled.button`
     justify-content: center;
   }
 `;
+export const ErrorForm = styled.p`
+  text-align:center;
+  color: #ff0016;
+`
+

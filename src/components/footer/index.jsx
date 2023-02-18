@@ -1,26 +1,22 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import * as S from "./style";
 
 export const Footer = () => {
 
-
+    const userIsLogged = useSelector((state) => state.auth.isLogin)
     return (
         <S.Footer>
         <S.FooterContainer>
             <S.FooterImg>
-                <a href="" target="_self">
-                    <img src="img/icon_01.png" alt="home"></img>  
-                </a>
+                    <NavLink to={"/"}><img src="/img/icon_01.png" alt="main"></img></NavLink>
             </S.FooterImg>
             <S.FooterImg>
-                <a href="" target="_self">
-                    <img src="img/icon_02.png" alt="home"></img>
-                </a>
+            {userIsLogged ? <NavLink to={"/add_new_ad"}><img src="/img/icon_02.png" alt="home"></img></NavLink> : <NavLink to={"/sign_in"}><img src="/img/icon_02.png" alt="main"></img></NavLink> }
                 </S.FooterImg>
             <S.FooterImg>
-                <a href="" target="_self">
-                    <img src="img/icon_03.png" alt="home"></img>
-                </a>
+              {userIsLogged ? <NavLink to={"/profile"}><img src="/img/icon_01.png" alt="main"></img></NavLink> : <NavLink to={"/sign_in"}><img src="/img/icon_01.png" alt="main"></img></NavLink> }
                 </S.FooterImg>
         </S.FooterContainer>
     </S.Footer>

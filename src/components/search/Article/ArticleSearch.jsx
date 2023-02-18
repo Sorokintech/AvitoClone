@@ -1,16 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 export const ArticleSearch = () => {
+  const history = useNavigate();
+  const navButton = (e) => {
+    e.preventDefault();
+    history('/');
+  }
   return (
     <S.MainContainer>
       <S.MainMenu>
-        <S.MenuLogoLink >
-          <S.MainLogoImg src="img/logo.png" alt="logo"></S.MainLogoImg>
+        <S.MenuLogoLink>
+          <S.MainLogoImg src='/img/logo.png' alt="logo" onClick={navButton}></S.MainLogoImg>
         </S.MenuLogoLink>
         <S.MenuForm >
-          <S.ButtonMenu><NavLink to={'/'}>Вернуться на главную</NavLink></S.ButtonMenu>
+          <S.ButtonMenu onClick={navButton}>Вернуться на главную</S.ButtonMenu>
         </S.MenuForm>
       </S.MainMenu>
     </S.MainContainer>

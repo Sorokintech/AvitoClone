@@ -3,8 +3,3 @@ export const ADD = () => {
         type: 'ADD'
     }
 };
-export const REMOVE = () => {
-    return { 
-        type: 'REMOVE'
-    }
-};
