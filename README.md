@@ -13,13 +13,20 @@ This project is a solo mission.
 ## Projects Stack
 
 This project has been built using the following:
-•React
-•Redux
-•React-redux
-•reduxjs/toolkit
-•react-toastify
-•date-fns
-•styled components
+
+• React
+
+• Redux
+
+• React-redux
+
+• reduxjs/toolkit
+
+• react-toastify
+
+• date-fns
+
+• styled components
 
 ## Backend
 
